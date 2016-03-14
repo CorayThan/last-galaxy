@@ -1,0 +1,25 @@
+.top-spacer {
+	margin-top: 20px;
+}
+
+.info-message-wrapper {
+    margin-top: 10px;
+}
+
+.info, .success, .warning, .error {
+    padding: 10px;
+    color: #333;
+    display: inline-block;
+}
+.info {
+    background-color: #BDE5F8;
+}
+.success {
+    background-color: #DFF2BF;
+}
+.warning {
+    background-color: #FEEFB3;
+}
+.error {
+    background-color: #FFBABA;
+}

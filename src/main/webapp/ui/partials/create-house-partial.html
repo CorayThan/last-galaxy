@@ -1,0 +1,15 @@
+<div class="page-header">
+	<h1>Create a House</h1>
+</div>
+
+<form class="pure-form pure-form-aligned">
+	<fieldset>
+		<div class="pure-control-group">
+			<lable for="name">House Name</lable>
+			<input id="name" type="text" placeholder="House Name" ng-model="house.name">
+		</div>
+		<div class="pure-controls">
+			<button type="submit" class="pure-button pure-button-primary" ng-click="createHouse(house)">Create!</button>
+		</div>
+	</fieldset>
+</form>

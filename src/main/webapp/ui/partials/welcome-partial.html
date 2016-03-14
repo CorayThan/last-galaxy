@@ -1,0 +1,46 @@
+<div class="header">
+	<h1>Omni Vorati, the Last Galaxy</h1>
+	<h2>Please login or create a new account.</h2>
+</div>
+
+<div class="content">
+	<form class="pure-form" ng-show="login">
+		<fieldset>
+			<legend>
+				Login
+			</legend>
+
+			<input id="loginEmail" type="text" placeholder="Email" ng-model="user.email" lg-focus>
+			<input type="password" placeholder="Password" ng-model="user.password">
+			<button type="submit" class="pure-button pure-button-primary" ng-click="loginUser(user)">
+				Sign in
+			</button>
+            <lg-info-message ng-show="loginFailed" type="'error'" message="'Your login attempt was unsuccessful.'"></lg-info-message>
+		</fieldset>
+	</form>
+
+	<form class="pure-form pure-form-stacked" ng-show="!login">
+		<fieldset>
+			<legend>
+				Create a new Account
+			</legend>
+
+			<label for="username">Username -- This will be displayed to other players</label>
+			<input id="username" type="text" placeholder="Username" ng-model="user.username">
+
+			<label for="email">Email -- This will be your login</label>
+			<input id="email" type="email" placeholder="Email" ng-model="user.email">
+
+			<label for="password">Password</label>
+			<input id="password" type="password" placeholder="Password" ng-model="user.password">
+
+		</fieldset>
+		<button type="submit" class="pure-button pure-button-primary" ng-click="createUser(user)">
+			Create new Account
+		</button>
+	</form>
+	<div></div>
+	<button class="pure-button top-spacer" ng-click="switchView()">
+		{{login ? "Create Account" : "Use Existing Account"}}
+	</button>
+</div>
